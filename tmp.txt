@@ -1,0 +1,2 @@
+do roboty:
+	-usuwanie list nie dzia³a poprawnie

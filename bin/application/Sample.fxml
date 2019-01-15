@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ProgressBar?>
+
+<BorderPane fx:id="mainPane" prefHeight="800.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="chartBox" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <BarChart fx:id="barChart" legendVisible="false" prefHeight="200" verticalGridLinesVisible="false" prefWidth="325" >
+              		<xAxis>
+                		<CategoryAxis fx:id="frequencyAxis" side="BOTTOM" tickLabelsVisible="false" tickMarkVisible="false" visible="false"/>
+              		</xAxis>
+              		<yAxis>
+               			<NumberAxis fx:id="magnitudeValue" autoRanging="false" lowerBound="0" side="LEFT" tickUnit="10"/>
+              		</yAxis>
+            		</BarChart>
+            		<Slider fx:id="volumneSlider" orientation="VERTICAL" max="1" min="0" value="1" disable="true"/>
+               </children>
+            </HBox> 
+           	<VBox fx:id="controlsBox" prefHeight="100" spacing="10">
+	      		<children>
+	      			<StackPane alignment="CENTER" >
+	      				<children>
+	      					<ProgressBar fx:id="progressBar" maxWidth="350" minHeight="20" progress="0"/>
+	      					<Slider fx:id="timeProgress" max="180" value="0" maxWidth="350" minHeight="20" disable="true"/>
+	      				</children>
+	      			</StackPane>
+	      			<HBox fx:id="menuBox" alignment="CENTER" spacing="5.0">
+	      				<children>
+	                     <Label fx:id="currentTimeLabel" text="0:00" />
+	                     <HBox fx:id="buttonsBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+	                        <children>
+	                           <Group fx:id="playGroup" disable="true">
+	                              <children>
+	                                 <Circle fx:id="circleButton1" fill="DARKORANGE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+	                                 <Arc fx:id="playSymbol" centerX="12.0" centerY="16.0" fill="BLACK" layoutX="-7.0" layoutY="-16.0" 
+	                                 length="60.0" radiusX="10.0" radiusY="10.0" startAngle="150.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+	                              </children>
+	                           </Group>
+	                           <Group fx:id="pauseGroup" disable="true">
+	                           	<children>
+	                                 <Circle fx:id="circleButton2" fill="DARKORANGE" radius="12.0" stroke="BLACK" strokeType="INSIDE" translateY="2" />
+	                                 <Line endX="6" endY="14" startX="6" startY="6" strokeWidth="2" translateX="-8" translateY="-8" />
+	                                 <Line endX="6" endY="14" startX="6" startY="6" strokeWidth="2" translateX="-4" translateY="-8" />
+	                              </children>
+	                           </Group>
+	                           <Group fx:id="stopGroup" disable="true">
+	                           	<children>
+	                                 <Circle fx:id="circleButton3" fill="DARKORANGE" radius="12.0" stroke="BLACK" strokeType="INSIDE" translateY="2" />
+	                                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="BLACK" height="10.0" stroke="BLACK" strokeType="INSIDE" width="10.0"
+	                                 translateX="-4.8" translateY="-3" />	
+	                              </children>
+	                           </Group>
+	                           <Group fx:id="previousGroup">
+	                           	<children>
+	                                 <Circle fx:id="circleButton4" fill="DARKORANGE" radius="12.0" stroke="BLACK" strokeType="INSIDE" translateY="2" />
+	                                 <Arc centerX="12.0" centerY="16.0" fill="BLACK" translateX="-19" translateY="-14"  
+	                                 length="90" radiusX="7" radiusY="7" startAngle="315" stroke="BLACK" strokeType="INSIDE" type="ROUND"
+	                                 />
+	                                 <Arc centerX="12.0" centerY="16.0" fill="BLACK" translateX="-13" translateY="-14" 
+	                                 length="90" radiusX="7" radiusY="7" startAngle="315" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+	                              </children>
+	                           </Group>
+	                           <Group fx:id="nextGroup">
+	                           	<children>
+	                                 <Circle fx:id="circleButton5" fill="DARKORANGE" radius="12.0" stroke="BLACK" strokeType="INSIDE" translateY="2" />
+	                                 <Arc centerX="12.0" centerY="16.0" fill="BLACK" translateX="-11" translateY="-14"  
+	                                 length="90" radiusX="7" radiusY="7" startAngle="135" stroke="BLACK" strokeType="INSIDE" type="ROUND"
+	                                 />
+	                                 <Arc centerX="12.0" centerY="16.0" fill="BLACK" translateX="-5" translateY="-14" 
+	                                 length="90" radiusX="7" radiusY="7" startAngle="135" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+	                              </children>
+	                           </Group>
+	                           <Group fx:id="importGroup">
+	                              <children>
+	                              <Circle fx:id="circleButton6" fill="DARKORANGE" radius="12.0" stroke="BLACK" strokeType="INSIDE" translateY="2" />
+	                              <Arc centerX="12.0" centerY="16.0" fill="BLACK" translateX="-12" translateY="-20" 
+	                                 length="90" radiusX="7" radiusY="7" startAngle="225" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+	                              <Line endX="6" endY="6" startX="14" startY="6" strokeWidth="2" translateX="-10" translateY="-1" /> 
+	                              </children>
+	                           </Group>
+	                        </children>
+	                     </HBox>
+	                     <Label fx:id="durationLabel" text="-:--" />
+	      				</children>
+	      			</HBox>
+	      		</children>
+	      	</VBox> 
+            <Accordion fx:id="songsFull" prefHeight="500">
+              <panes>
+                <TitledPane animated="false" text="brak tytułu" />
+              </panes>
+            </Accordion>
+         </children>
+      </VBox>
+   </center>
+   <top>
+		<Pane fx:id="bottomPane" prefHeight="20" BorderPane.alignment="CENTER">
+			<Text fx:id="msg" text="Wybierz utwór!" translateY="15"/>
+		</Pane>
+   </top>
+   <bottom>
+      <Label fx:id="infoBar" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

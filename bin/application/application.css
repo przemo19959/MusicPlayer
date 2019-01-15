@@ -1,0 +1,120 @@
+#songTitle{
+	-fx-alignment: center ;
+	-fx-background-color: rgb(13,11,60);
+	-fx-text-fill: white ;
+}
+
+.list-cell:selected{
+	-fx-background-color: rgb(174,174,174);
+	-fx-text-fill: black ;
+}
+
+.list-cell{
+	-fx-background-color: rgb(51,51,51);
+	-fx-text-fill: rgb(176,176,176);
+	-fx-border-color: rgb(176,176,176);
+}
+
+.list-view .scroll-bar:horizontal .thumb,.list-view .scroll-bar:vertical .thumb{
+	-fx-background-color: orange ;
+}
+
+.list-view .scroll-bar:horizontal .track,.list-view .scroll-bar:vertical .track{
+	-fx-background-color: rgb(51,51,51);
+}
+
+.list-view .scroll-bar:horizontal .decrement-button,
+.list-view .scroll-bar:vertical .decrement-button,
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:vertical .increment-button{
+	-fx-background-color: rgb(51,51,51);
+	-fx-border-color: rgb(51,51,51);
+}
+
+.list-view .scroll-bar .decrement-arrow,
+.list-view .scroll-bar .increment-arrow{
+	-fx-fill: orange ;
+}
+
+#songFull{
+	-fx-background-color: rgb(51,51,51);
+}
+
+#infoBar{
+	-fx-text-fill: rgb(176,176,176);
+}
+
+#mainPane{
+	-fx-background-color: rgb(51,51,51);
+}
+
+#controlsBox{
+	-fx-background-color: rgb(51,51,51);
+} 
+
+.chart-plot-background{
+	-fx-background-color: rgb(51,51,51);	
+}
+
+#currentTimeLabel,#durationLabel{
+	-fx-text-fill: rgb(176,176,176);
+}
+
+.titled-pane .title{
+	-fx-background-color: rgb(51,51,51);
+	-fx-border-color: orange ;
+}
+
+.titled-pane .title .arrow-button .arrow{
+	-fx-background-color: orange ;
+}
+
+.titled-pane{
+	-fx-text-fill: rgb(176,176,176);
+}
+
+#msg{
+	-fx-background-color: rgb(51,51,51);
+	-fx-fill: rgb(176,176,176);
+}
+
+#bottomPane{
+	-fx-fill: rgb(51,51,51); 
+	
+	-fx-background-color:rgb(51,51,51); 
+}
+
+#volumneSlider .track{
+	-fx-background-color: orange;
+}
+
+#volumneSlider .thumb{
+	-fx-background-color: rgb(51,51,51);
+	-fx-border-color: rgb(176,176,176);
+	-fx-border-width: 2;
+}
+
+#timeProgress .track {
+    -fx-background-color:null;  /* Hide the track */
+}
+
+#timeProgress .thumb{
+	-fx-background-color: transparent ;
+}
+
+#progressBar .bar{
+	-fx-background-color:orange;
+}
+
+#progressBar .track{
+	-fx-background-color: rgb(51,51,51);
+	-fx-border-color: rgb(176,176,176);
+	-fx-border-width: 2;
+} 
+
+#chartBox{
+	-fx-background-color: rgb(51,51,51);
+}
+  
+
+
